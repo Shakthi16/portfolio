@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>My Latest Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .project-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+        .project-card .overlay a {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #fff;
+            color: #000;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .project-card .overlay a:hover {
+            background: #ddd;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto py-12">
+        <h1 class="text-4xl font-bold text-center mb-4 section-title">My Latest Project</h1>
+        <p class="text-center text-gray-400 mb-12">
+            A showcase of hands-on projects that demonstrate my skills in full-stack web development and problem-solving. Each project reflects my commitment to building responsive, user-centric applications using modern technologies.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg project-card">
+                <img alt="Weather App" class="object-cover" src="https://i.ibb.co/BtS8G6S/Screenshot-2024-08-15-135141.png"/>
+                <div class="p-6">
+                    <h2 class="text-sm text-gray-400 mb-1">Application</h2>
+                    <h3 class="text-xl font-bold mb-2">Weather App</h3>
+                    <p class="text-gray-400">Developed a real-time weather forecasting web app with accurate data from third-party APIs. Emphasized
+                        responsive design for optimal usability across devices.</p>
+                </div>
+                <div class="overlay">
+                    <a href="https://github.com/Shakthi16/weather-app" class="github" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://shakthi16.github.io/weather-app/" class="live-demo" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div></div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg project-card">
+                <img alt="Aurum Page for Credit Card Purchase" class="object-cover" src="https://i.ibb.co/0D6G6DX/Screenshot-2024-08-24-115804.png"/>
+                <div class="p-6">
+                    <h2 class="text-sm text-gray-400 mb-1">Product Design</h2>
+                    <h3 class="text-xl font-bold mb-2">Aurum Page for Credit Card Purchase</h3>
+                    <p class="text-gray-400"> Created an aesthetically pleasing landing page with advanced CSS animations and smooth UI transitions.</p>
+                </div>
+                <div class="overlay">
+                    <a href="https://github.com/Shakthi16/aurumpage" class="github" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://shakthi16.github.io/aurumpage/" class="live-demo" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                </div></div>
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg project-card">
+                <img alt="Expense Tracker using JavaFX" class="object-cover" src="https://i.ibb.co/chYJVMT/Screenshot-2024-11-07-195045.png"/>
+                <div class="p-6">
+                    <h2 class="text-sm text-gray-400 mb-1">Development</h2>
+                    <h3 class="text-xl font-bold mb-2">Expense Tracker using JavaFX</h3>
+                    <p class="text-gray-400">Expense Tracker with many features for calculating expense and saving.</p>
+                </div>
+                <div class="overlay">
+                    <a href="#" class="github"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="live-demo"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

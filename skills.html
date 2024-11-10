@@ -1,0 +1,505 @@
+<html>
+ <head>
+  <title>
+   Resume
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   .skill-bar {
+            position: relative;
+            height: 10px;
+            background-color: #2d3748;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .skill-bar-fill {
+            height: 100%;
+            background-color: #f56565;
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        .skill-bar:hover .skill-bar-fill {
+            background-color: #ed8936;
+        }
+        .card {
+            background-color: #2d3748;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .icon {
+            font-size: 2rem;
+            color: #f56565;
+        }
+        .header {
+            background-color: #2d3748;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+        .platform-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .badge {
+            background-color: #f56565;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-size: 0.875rem;
+            margin-top: 5px;
+        }
+  </style>
+  <script>
+   function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+  </script>
+ </head>
+ <body class="bg-gray-900 text-white font-sans">
+  <div class="container mx-auto p-6">
+   <!-- Header Section -->
+   <div class="header">
+    <h1>
+     Resume
+    </h1>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Education Section -->
+    <div>
+     <h2 class="text-2xl font-bold mb-4">
+      <i class="fas fa-graduation-cap mr-2">
+      </i>
+      Education
+     </h2>
+     <div class="relative">
+      <div class="absolute left-4 top-0 h-full border-l-2 border-red-500">
+      </div>
+      <div class="relative pl-10 mb-4">
+       <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 p-1 rounded-full">
+       </div>
+       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-2">
+         <i class="fas fa-calendar-alt text-red-500 mr-2">
+         </i>
+         <span>
+          2022 - 2026
+         </span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">
+         Bachelor of Technology In Information Technology - Kingston Engineering College
+        </h3>
+        <p>
+         Currently pursuing my Bachelor of Engineering in Computer Science from Kingston Engineering College, Vellore. This program has equipped me with a strong foundation in software development, web technologies, and analytical problem-solving. My studies have enhanced my skills as a Full Stack Developer and UX Designer.
+        </p>
+       </div>
+      </div>
+      <div class="relative pl-10 mb-4">
+       <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 p-1 rounded-full">
+       </div>
+       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-2">
+         <i class="fas fa-calendar-alt text-red-500 mr-2">
+         </i>
+         <span>
+          2021 - 2022
+         </span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">
+         Higher Secondary - Sai Guruji School (HSC)
+        </h3>
+        <h2>
+         Graduated with a strong academic record, focusing on science and mathematics scoring 89%
+        </h2>
+       </div>
+      </div>
+      <div class="relative pl-10 mb-4">
+       <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 p-1 rounded-full">
+       </div>
+       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-2">
+         <i class="fas fa-calendar-alt text-red-500 mr-2">
+         </i>
+         <span>
+          2019 - 2020
+         </span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">
+         SSLC - Sai Guruji Matriculation School
+        </h3>
+        <h2>
+         Achieved a solid academic foundation in foundational subjects, setting the stage for my future studies in technology scoring 91%
+        </h2>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Experience Section -->
+    <div>
+     <h2 class="text-2xl font-bold mb-4">
+      <i class="fas fa-briefcase mr-2">
+      </i>
+      Experience
+     </h2>
+     <div class="relative">
+      <div class="absolute left-4 top-0 h-full border-l-2 border-red-500">
+      </div>
+      <div class="relative pl-10 mb-4">
+       <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 p-1 rounded-full">
+       </div>
+       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-2">
+         <i class="fas fa-calendar-alt text-red-500 mr-2">
+         </i>
+         <span>
+          Sep 26 - Nov 26, 2024
+         </span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">
+         Work As A Intern - CodetechIT Solutions
+        </h3>
+        <p>
+         Currently interning as a Full Stack Developer at Codetech IT Solution, working on hands-on projects in web development, building responsive and scalable applications, and learning industry best practices.
+        </p>
+       </div>
+      </div>
+      <div class="relative pl-10 mb-4">
+       <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-red-500 p-1 rounded-full">
+       </div>
+       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-2">
+         <i class="fas fa-calendar-alt text-red-500 mr-2">
+         </i>
+         <span>
+          Sep 4 - Oct 1, 2024
+         </span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">
+         Full Stack Developer Masterclass - Novitech
+        </h3>
+        <p>
+         Completed an intensive 30-day masterclass focusing on advanced full stack development concepts, including frontend and backend technologies, project structuring, and performance optimization.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Skills Section -->
+   <div class="mt-10">
+    <h2 class="text-2xl font-bold mb-4">
+     <i class="fas fa-tools mr-2">
+     </i>
+     Skills
+    </h2>
+    <p class="mb-4">
+     As a full-stack developer, I have a diverse set of skills that allow me to build and maintain both the front-end and back-end of web applications. Below are some of the key technologies I work with:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div>
+      <div class="mb-4" onclick="changeBackgroundColor('#1a202c')">
+       <div class="flex justify-between mb-1">
+        <span>
+         HTML
+        </span>
+        <span>
+         95%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 95%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#2d3748')">
+       <div class="flex justify-between mb-1">
+        <span>
+         CSS
+        </span>
+        <span>
+         90%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 90%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#4a5568')">
+       <div class="flex justify-between mb-1">
+        <span>
+         JavaScript
+        </span>
+        <span>
+         75%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 75%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#718096')">
+       <div class="flex justify-between mb-1">
+        <span>
+         React
+        </span>
+        <span>
+         50%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 50%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#a0aec0')">
+       <div class="flex justify-between mb-1">
+        <span>
+         MongoDB
+        </span>
+        <span>
+         80%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 80%;">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div>
+      <div class="mb-4" onclick="changeBackgroundColor('#cbd5e0')">
+       <div class="flex justify-between mb-1">
+        <span>
+         Node.js
+        </span>
+        <span>
+         75%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 75%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#e2e8f0')">
+       <div class="flex justify-between mb-1">
+        <span>
+         PHP
+        </span>
+        <span>
+         85%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 85%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#edf2f7')">
+       <div class="flex justify-between mb-1">
+        <span>
+         Java
+        </span>
+        <span>
+         60%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 60%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#f7fafc')">
+       <div class="flex justify-between mb-1">
+        <span>
+         Python
+        </span>
+        <span>
+         80%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 80%;">
+        </div>
+       </div>
+      </div>
+      <div class="mb-4" onclick="changeBackgroundColor('#e6fffa')">
+       <div class="flex justify-between mb-1">
+        <span>
+         DSA In Java
+        </span>
+        <span>
+         60%
+        </span>
+       </div>
+       <div class="skill-bar">
+        <div class="skill-bar-fill" style="width: 60%;">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Certifications Section -->
+   <div class="mt-10">
+    <h2 class="text-2xl font-bold mb-4">
+     <i class="fas fa-certificate mr-2">
+     </i>
+     Certifications
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="card">
+      <div class="flex items-center mb-2">
+       <i class="fas fa-award icon mr-2">
+       </i>
+       <h3 class="text-xl font-semibold">
+        LetsUpgrade
+       </h3>
+      </div>
+      <p>
+       Python, HTML, CSS, MongoDB, Prompt Engineering
+      </p>
+     </div>
+     <div class="card">
+      <div class="flex items-center mb-2">
+       <i class="fas fa-award icon mr-2">
+       </i>
+       <h3 class="text-xl font-semibold">
+        Infosys
+       </h3>
+      </div>
+      <p>
+       Deep Learning, Artificial Intelligence
+      </p>
+     </div>
+     <div class="card">
+      <div class="flex items-center mb-2">
+       <i class="fas fa-award icon mr-2">
+       </i>
+       <h3 class="text-xl font-semibold">
+        Novitech
+       </h3>
+      </div>
+      <p>
+       30-Day Masterclass (September 4 - October 14)
+      </p>
+     </div>
+     <div class="card">
+      <div class="flex items-center mb-2">
+       <i class="fas fa-award icon mr-2">
+       </i>
+       <h3 class="text-xl font-semibold">
+        Other Certifications
+       </h3>
+      </div>
+      <p>
+       Python, Java, Adobe Photoshop, Project Management, Ethical Hacking, Web Designing &amp; Development
+      </p>
+     </div>
+    </div>
+   </div>
+   <!-- Coding Platforms & Practice Section -->
+   <div class="mt-10">
+    <h2 class="text-2xl font-bold mb-4">
+     <i class="fas fa-laptop-code mr-2">
+     </i>
+     Coding Platforms &amp; Practice
+    </h2>
+    <p class="mb-4">
+     Continuously refining my coding skills across various platforms:
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="card" onclick="window.open('https://www.sololearn.com', '_blank')">
+      <div class="flex items-center mb-2">
+       <img alt="SoloLearn logo" class="platform-icon" height="40" src="https://storage.googleapis.com/a1aa/image/F60aKdlNRp4QANedvyTagk8IDIMHAd15TS8HIkGcoE4fepeOB.jpg" width="40"/>
+       <h3 class="text-xl font-semibold">
+        SoloLearn
+       </h3>
+      </div>
+      <span class="badge">
+       100+ problems solved
+      </span>
+      <p>
+       Building foundational knowledge through interactive lessons.
+      </p>
+     </div>
+     <div class="card" onclick="window.open('https://www.codechef.com', '_blank')">
+      <div class="flex items-center mb-2">
+       <img alt="CodeChef logo" class="platform-icon" height="40" src="https://storage.googleapis.com/a1aa/image/yrcfEye3eIAvEpkOnpdrKvtotf63FSLUSi7OcEL98prL8T9OB.jpg" width="40"/>
+       <h3 class="text-xl font-semibold">
+        CodeChef
+       </h3>
+      </div>
+      <span class="badge">
+       100+ problems solved
+      </span>
+      <p>
+       Practicing competitive programming for speed and precision.
+      </p>
+     </div>
+     <div class="card" onclick="window.open('https://www.geeksforgeeks.org', '_blank')">
+      <div class="flex items-center mb-2">
+       <img alt="GeeksforGeeks logo" class="platform-icon" height="40" src="https://storage.googleapis.com/a1aa/image/msJGY1LKDCoRKpGLjAUMOWZneL1THI4Axaj3gRSBr3shfUvTA.jpg" width="40"/>
+       <h3 class="text-xl font-semibold">
+        GeeksforGeeks
+       </h3>
+      </div>
+      <span class="badge">
+       100+ problems solved
+      </span>
+      <p>
+       Studying algorithms and data structures in depth.
+      </p>
+     </div>
+     <div class="card" onclick="window.open('https://leetcode.com', '_blank')">
+      <div class="flex items-center mb-2">
+       <img alt="LeetCode logo" class="platform-icon" height="40" src="https://storage.googleapis.com/a1aa/image/0qZd9Ls3lXrkJVf4u6KK5F52iwNijqAj4WFArjNSaRNgfUvTA.jpg" width="40"/>
+       <h3 class="text-xl font-semibold">
+        LeetCode
+       </h3>
+      </div>
+      <span class="badge">
+       100+ problems solved
+      </span>
+      <p>
+       Solving algorithmic challenges for interview prep.
+      </p>
+     </div>
+     <div class="card" onclick="window.open('https://www.hackerrank.com', '_blank')">
+      <div class="flex items-center mb-2">
+       <img alt="HackerRank logo" class="platform-icon" height="40" src="https://storage.googleapis.com/a1aa/image/EzQFe5vX9n2MFC7T1ihrh85kcVBKwZFnqBlNR2v3C9oeepeOB.jpg" width="40"/>
+       <h3 class="text-xl font-semibold">
+        HackerRank
+       </h3>
+      </div>
+      <span class="badge">
+       100+ problems solved
+      </span>
+      <p>
+       Practicing end-to-end coding challenges across various domains like SQL, data structures, and full-stack development.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
