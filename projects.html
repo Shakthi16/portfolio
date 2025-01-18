@@ -1,0 +1,467 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   My Latest Project
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .project-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .overlay {
+            opacity: 1;
+        }
+        .project-card .overlay a {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #000;
+            color: #fff;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .project-card .overlay a:hover {
+            background: #1f2937;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background: #000;
+            transform: translateX(-50%);
+        }
+        .hidden {
+            display: none;
+        }
+        .btn-custom {
+            background: linear-gradient(90deg, rgba(29,78,216,1) 0%, rgba(37,99,235,1) 50%, rgba(59,130,246,1) 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            transform: translateY(20px);
+        }
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .language {
+            background: #f3f4f6;
+            color: #1f2937;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+  </style>
+  <script>
+   function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+                section.classList.add('hidden');
+            });
+            const section = document.getElementById(sectionId);
+            section.classList.remove('hidden');
+            setTimeout(() => {
+                section.classList.add('active');
+            }, 10);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('webdev-section');
+        });
+  </script>
+ </head>
+ <body class="bg-gray-100 text-gray-900">
+  <div class="container mx-auto py-12">
+   <h1 class="text-4xl font-bold text-center mb-4 section-title">
+    My Latest Project
+   </h1>
+   <p class="text-center text-gray-600 mb-12">
+    A showcase of hands-on projects that demonstrate my skills in full-stack web development and problem-solving. Each project reflects my commitment to building responsive, user-centric applications using modern technologies.
+   </p>
+   <div class="flex justify-center mb-8">
+    <button class="btn-custom mr-4" onclick="showSection('uiux-section')">
+     UI/UX Design
+    </button>
+    <button class="btn-custom" onclick="showSection('webdev-section')">
+     Web Development
+    </button>
+   </div>
+   <div class="section hidden" id="uiux-section">
+    <h2 class="text-3xl font-bold text-center mb-8 section-title">
+     UI/UX Design
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Figma design for Aurum Page for Credit Card Purchase with advanced CSS animations and smooth UI transitions" class="object-cover" src="https://i.ibb.co/413tnkC/Screenshot-2025-01-17-232717.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        Learning Platform Website Design
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+        EduGo
+       </h3>
+       <p class="text-gray-600">
+        A clean, modern Figma design for "EduGo," an online learning platform showcasing courses, mentorship, certifications, and global community features, with vibrant visuals and strong CTAs.
+    </p>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://www.figma.com/proto/823yMjZjFP7NlHpt7Cx6bQ/edugo?node-id=0-1&t=hCVNlFLv28bjlNfD-1" target="_blank">
+        <i class="fab fa-figma">
+        </i>
+        Figma
+       </a>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Figma design for a modern e-commerce website" class="object-cover" src="https://i.ibb.co/mhpMpNL/Screenshot-2025-01-17-233410.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        Sign-up flow Design
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+        Modern sign-up flow
+       </h3>
+       <p class="text-gray-600">
+        Designed a modern and user-friendly sign up and login flow.
+       </p>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://www.figma.com/proto/I1ASQY2n71Ny3SHtDbZX3R/1UX-3UI-(Community)?node-id=0-1&t=4EV44mHU66c5LAuy-1" target="_blank">
+        <i class="fab fa-figma">
+        </i>
+        Figma
+       </a>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Figma design for a mobile app interface" class="object-cover" src="https://i.ibb.co/XspL7xY/Screenshot-2025-01-17-233654.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        E-commerce Design
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+        Men's Ecommerce
+       </h3>
+       <p class="text-gray-600">
+        Created a bold, modern, and classy e-commerce website named Flexy, dedicated exclusively to men's fashion, grooming, and lifestyle products.       </p>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://www.figma.com/proto/0DLbG9VmXQKAGVpXYc1WhG/heartbeat---Emails-(Community)?node-id=6709-1215&t=5ITMbVvYhh3WGuXd-1" target="_blank">
+        <i class="fab fa-figma">
+        </i>
+        Figma
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="section hidden" id="webdev-section">
+    <h2 class="text-3xl font-bold text-center mb-8 section-title">
+     Web Development
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Weather App showing real-time weather data with a clean and modern interface" class="object-cover" src="https://i.ibb.co/F0wPrRJ/Screenshot-2025-01-17-231636.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        Application
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+        Weather App
+       </h3>
+       <p class="text-gray-600">
+        Developed a real-time weather forecasting web app with accurate data from third-party APIs. Emphasized responsive design for optimal usability across devices.
+       </p>
+       <div class="languages">
+        <span class="language">
+         HTML
+        </span>
+        <span class="language">
+         CSS
+        </span>
+        <span class="language">
+         JavaScript
+        </span>
+        <span class="language">
+         API
+        </span>
+       </div>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://github.com/Shakthi16/weather-app-" target="_blank">
+        <i class="fab fa-github">
+        </i>
+        GitHub
+       </a>
+       <a class="live-demo" href="https://weatherappweb1.netlify.app/" target="_blank">
+        <i class="fas fa-external-link-alt">
+        </i>
+        Live Demo
+       </a>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="a landing page with advanced animations and smooth UI, boosting user interactions" class="object-cover" src="https://i.ibb.co/YL0J9tL/Screenshot-2025-01-17-232117.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        Website Development
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+        Aurum Page
+       </h3> 
+       <p class="text-gray-600">
+        alanding page with advanced animations and smooth UI, boosting user interactions       </p>      
+       <div class="languages">
+        <span class="language">
+         HTML
+        </span>
+        <span class="language">
+         css
+        </span>
+        <span class="language">
+            JS
+           </span>
+       </div>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://github.com/Shakthi16/aurumpage">
+        <i class="fab fa-github">
+        </i>
+        GitHub
+       </a>
+       <a class="live-demo" href="https://aurumpage5.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i>
+        Live Demo
+      </a>
+      
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Portfolio website showcasing various projects and skills" class="object-cover" src="https://i.ibb.co/58M6xth/Screenshot-2025-01-17-235322.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        IceCream Website
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+FrostyDelight Website Devlopment       </h3>
+       <p class="text-gray-600">
+        Designed and developed "Frosty Delight," a responsive and user-friendly web application showcasing an ice cream shop, featuring an intuitive interface and modern design aesthetics.       </p>
+       <div class="languages">
+        <span class="language">
+         HTML
+        </span>
+        <span class="language">
+         CSS
+        </span>
+        <span class="language">
+         JavaScript
+        </span>
+        <span class="language">
+         Tailwind
+        </span>
+       </div>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://github.com/Shakthi16/icecream">
+        <i class="fab fa-github">
+        </i>
+        GitHub
+       </a>
+       <a class="live-demo" href="https://frostydelightice.netlify.app/" target="_blank">
+        <i class="fas fa-external-link-alt">
+        </i>
+        Live Demo
+       </a>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="E-commerce website with a modern and user-friendly interface" class="object-cover" src="https://i.ibb.co/CWv0rLy/Screenshot-2025-01-18-000050.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        Star cursor Navigation
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+Playful animations with quotes       </h3>
+       <p class="text-gray-600">
+        Developed a star cursor with dynamic effects and double-tap firework animations featuring motivational quotes.
+
+
+    </p>
+       <div class="languages">
+        <span class="language">
+         HTML
+        </span>
+        <span class="language">
+         CSS
+        </span>
+        <span class="language">
+         JavaScript
+        </span>
+        
+        
+       </div>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://github.com/Shakthi16/starscursor">
+        <i class="fab fa-github">
+        </i>
+        GitHub
+       </a>
+       <a class="live-demo" href="https://starcursor.netlify.app/" target="_blank">
+        <i class="fas fa-external-link-alt">
+        </i>
+        Live Demo
+       </a>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Blog platform with features for writing and sharing articles" class="object-cover" src="https://i.ibb.co/MSJDKF2/Screenshot-2025-01-18-150736.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        Alarm clock
+       </h2>
+       <h3 class="text-lg font-bold mb-2">
+        Neumorphism clock 
+       </h3>
+       <p class="text-gray-600">
+        This Neumorphism clock features a sleek, 3D-like design with soft shadows and gradients. Its minimalist style ensures both elegance and easy readability.
+
+
+
+    </p>
+       <div class="languages">
+        <span class="language">
+         HTML
+        </span>
+        <span class="language">
+         CSS
+        </span>
+        <span class="language">
+         JavaScript
+        </span>
+        <span class="language">
+        Tailwind
+        </span>
+        
+       </div>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://github.com/Shakthi16/alarmclock">
+        <i class="fab fa-github">
+        </i>
+        GitHub
+       </a>
+       <a class="live-demo" href="https://extraordinary-lolly-c19e3e.netlify.app/" target="_blank">
+        <i class="fas fa-external-link-alt">
+        </i>
+        Live Demo
+       </a>
+      </div>
+     </div>
+     <div class="bg-white rounded-lg overflow-hidden shadow-lg project-card">
+      <img alt="Social media app with features for connecting and sharing with friends" class="object-cover" src="https://i.ibb.co/GJmNcYH/Screenshot-2025-01-18-153206.png"/>
+      <div class="p-4">
+       <h2 class="text-sm text-gray-600 mb-1">
+        3d house
+       </h2>
+       
+       <p class="text-gray-600">
+        Developed a 3d modern house .
+       </p>
+       <div class="languages">
+        <span class="language">
+         HTML
+        </span>
+        <span class="language">
+         CSS
+        </span>
+        <span class="language">
+         JavaScript
+        </span>
+    
+       </div>
+      </div>
+      <div class="overlay">
+       <a class="github" href="https://github.com/Shakthi16/3dhouse">
+        <i class="fab fa-github">
+        </i>
+        GitHub
+       </a>
+       <a class="live-demo" href="https://3dhouse1.netlify.app/" target="_blank">
+        <i class="fas fa-external-link-alt">
+        </i>
+        Live Demo
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

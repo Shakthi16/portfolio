@@ -1,0 +1,179 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Profile Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Poppins', sans-serif;
+            transition: background 0.3s, color 0.3s;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .transition-button {
+            transition: color 0.3s;
+        }
+        .active-button {
+            color: #ff007f;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 5px;
+            right: 0;
+            background: #ff007f;
+            transition: width 0.3s ease;
+            -webkit-transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active-button::after {
+            width: 100%;
+            left: 0;
+            background: #ff007f;
+        }
+  </style>
+ </head>
+ <body class="h-full w-full">
+  <div class="w-full h-full flex flex-col sm:flex-row">
+   <div class="w-full sm:w-1/4 bg-white p-4 sm:p-6 flex flex-col justify-between shadow-lg">
+    <div>
+     <div class="text-center">
+      <img alt="Profile Image of Shakthi Sri, a Full Stack Developer, with a friendly smile and professional attire" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto" src="https://i.ibb.co/XsSPqF2/Screenshot-2024-11-03-182856-removebg-preview.png"/>
+      <h2 class="mt-4 text-lg sm:text-xl font-semibold">
+       Shakthi Sri
+      </h2>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Web Developer | UI/UX Designer
+      </p>
+      <div class="mt-4 flex justify-center space-x-3">
+       
+       <a class="text-blue-400" href="https://github.com/Shakthi16">
+        <i class="fab fa-github">
+        </i>
+       </a>
+       <a class="text-black-500" href="mailto:srishakthi799@gmail.com">
+        <i class="fab fa-google"></i>
+    </a>
+    
+    
+       <a class="text-blue-700" href="https://www.linkedin.com/in/shakthisri/">
+        <i class="fab fa-linkedin-in">
+        </i>
+       </a>
+      </div>
+     </div>
+     <div class="mt-6 space-y-4">
+      <div class="flex items-center bg-gray-100 p-3 rounded-lg">
+       <i class="fas fa-phone-alt text-pink-500">
+       </i>
+       <div class="ml-3">
+        <p class="text-gray-600 text-xs sm:text-sm">
+         Phone
+        </p>
+        <p class="font-medium text-xs sm:text-sm">
+         8838198981
+        </p>
+       </div>
+      </div>
+      <div class="flex items-center bg-gray-100 p-3 rounded-lg">
+       <i class="fas fa-envelope text-pink-500">
+       </i>
+       <div class="ml-3">
+        <p class="text-gray-600 text-xs sm:text-sm">
+         Email
+        </p>
+        <p class="font-medium text-xs sm:text-sm">
+         srishakthi799@mail.com
+        </p>
+       </div>
+      </div>
+      <div class="flex items-center bg-gray-100 p-3 rounded-lg">
+       <i class="fab fa-github text-pink-500">
+       </i>
+       <div class="ml-3">
+        <p class="text-gray-600 text-xs sm:text-sm">
+         GitHub
+        </p>
+        <p class="font-medium text-xs sm:text-sm">
+         <a href="https://github.com/Shakthi16" target="_blank">
+          Shakthi16
+         </a>
+        </p>
+       </div>
+      </div>
+      <div class="flex items-center bg-gray-100 p-3 rounded-lg">
+       <i class="fab fa-linkedin text-pink-500">
+       </i>
+       <div class="ml-3">
+        <p class="text-gray-600 text-xs sm:text-sm">
+         LinkedIn
+        </p>
+        <p class="font-medium text-xs sm:text-sm">
+         <a href="https://www.linkedin.com/in/shakthisri/" target="_blank">
+          Shakthi Sri
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="text-center mt-6">
+     <a class="bg-pink-500 text-white px-4 py-2 rounded-full font-medium text-xs sm:text-sm" href="https://drive.google.com/file/d/1_9JOF6QzR5I14L0_iQjXG_lIEUDIYxLt/view">
+      Download Resume
+     </a>
+    </div>
+   </div>
+   <div class="w-full sm:w-3/4 bg-gray-50 p-4 sm:p-6 h-full overflow-auto">
+    <div class="flex justify-between items-center mb-6">
+     <div class="flex space-x-2 sm:space-x-4">
+      <a class="text-gray-600 px-2 sm:px-4 py-2 font-medium transition-button nav-link text-xs sm:text-sm" href="#" id="about-button" onclick="loadContent('about.html', 'about-button')">
+       About
+      </a>
+      <a class="text-gray-600 px-2 sm:px-4 py-2 font-medium transition-button nav-link text-xs sm:text-sm" href="#" id="skills-button" onclick="loadContent('skills.html', 'skills-button')">
+       Resume
+      </a>
+      <a class="text-gray-600 px-2 sm:px-4 py-2 font-medium transition-button nav-link text-xs sm:text-sm" href="#" id="projects-button" onclick="loadContent('projects.html', 'projects-button')">
+       Projects
+      </a>
+      
+      <a class="text-gray-600 px-2 sm:px-4 py-2 font-medium transition-button nav-link text-xs sm:text-sm" href="#" id="contact-button" onclick="loadContent('contact.html', 'contact-button')">
+       Contact
+      </a>
+     </div>
+    </div>
+    <iframe class="h-full w-full" id="content" src="load.html" style="border: none;">
+    </iframe>
+   </div>
+  </div>
+  <script>
+   function loadContent(page, buttonId) {
+            document.getElementById('content').src = page;
+            setActiveButton(buttonId);
+        }
+
+        function setActiveButton(buttonId) {
+            const buttons = document.querySelectorAll('.transition-button');
+            buttons.forEach(button => {
+                button.classList.remove('active-button');
+            });
+
+            const activeButton = document.getElementById(buttonId);
+            activeButton.classList.add('active-button');
+        }
+  </script>
+ </body>
+</html>

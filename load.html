@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Web Page with Animated Scooter and Programming Languages Icons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        @keyframes ride {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+        .scooter {
+            animation: ride 3s linear infinite;
+        }
+        .icon {
+            animation: ride 4s linear infinite;
+        }
+        .icon-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        .icon-container img {
+            position: absolute;
+        }
+        .icon-container img:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+        .icon-container img:nth-child(2) { top: 20%; left: 80%; transform: translateX(-50%); }
+        .icon-container img:nth-child(3) { top: 50%; left: 100%; transform: translateX(-50%); }
+        .icon-container img:nth-child(4) { top: 80%; left: 80%; transform: translateX(-50%); }
+        .icon-container img:nth-child(5) { top: 100%; left: 50%; transform: translateX(-50%); }
+        .icon-container img:nth-child(6) { top: 80%; left: 20%; transform: translateX(-50%); }
+        .icon-container img:nth-child(7) { top: 50%; left: 0; transform: translateX(-50%); }
+        .icon-container img:nth-child(8) { top: 20%; left: 20%; transform: translateX(-50%); }
+        .icon-container img:nth-child(9) { top: 40%; left: 60%; transform: translateX(-50%); }
+        .icon-container img:nth-child(10) { top: 60%; left: 40%; transform: translateX(-50%); }
+        .icon-container img:nth-child(11) { top: 30%; left: 70%; transform: translateX(-50%); }
+        .icon-container img:nth-child(12) { top: 10%; left: 10%; transform: translateX(-50%); }
+        .icon-container img:nth-child(13) { top: 70%; left: 90%; transform: translateX(-50%); }
+        .icon-container img:nth-child(14) { top: 90%; left: 30%; transform: translateX(-50%); }
+        .icon-container img:nth-child(15) { top: 50%; left: 50%; transform: translateX(-50%); }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-white">
+    <div class="relative w-full h-64 overflow-hidden">
+        <div class="absolute bottom-8 flex space-x-4 scooter">
+            <img alt="Illustration of a woman riding a blue scooter, wearing a yellow helmet, red shirt, and green pants" class="w-48 h-auto" height="200" src="https://storage.googleapis.com/a1aa/image/rOWOsxWcH9rfKKyLaGUIfobDBvPBTUZmtrb8rzNu7iA06hvTA.jpg" width="200"/>
+            <div class="icon-container">
+                <img alt="Java icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+                <img alt="PHP icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"/>
+                <img alt="JavaScript icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+                <img alt="HTML5 icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+                <img alt="CSS3 icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>
+                <img alt="React icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+                <img alt="Python icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
+                <img alt="Vue.js icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/>
+                <img alt="C++ icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/>
+                <img alt="UI/UX icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/>
+                <img alt="C# icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"/>
+                <img alt="MongoDB icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
+                <img alt="MySQL icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>
+                <img alt="Sass icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"/>
+                <img alt="Bootstrap icon" class="icon w-8 h-8" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"/>
+            </div>
+        </div>
+        <div class="absolute bottom-0 w-full h-16 bg-gray-800"></div>
+        <div class="absolute bottom-0 w-full h-4 bg-yellow-500"></div>
+    </div>
+</body>
+</html>

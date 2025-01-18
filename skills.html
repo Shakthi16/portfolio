@@ -1,0 +1,409 @@
+<html>
+<head>
+    <title>Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #F4F6FF;
+            position: relative;
+        }
+        .card {
+            background-color: #D4F6FF;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .icon {
+            font-size: 1rem;
+            color: #B76E79;
+        }
+        .header {
+            background-color: #F4F6FF;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #B76E79;
+        }
+        .platform-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+        }
+        .badge {
+            background-color: #B76E79;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+        .skill-card, .cert-card, .platform-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-card:hover, .cert-card:hover, .platform-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .skill-card h3, .cert-card h3, .platform-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #B76E79;
+            margin-bottom: 8px;
+        }
+        .skill-card ul, .cert-card ul, .platform-card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skill-card ul li, .cert-card ul li, .platform-card ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .skill-card ul li i, .cert-card ul li i, .platform-card ul li i {
+            margin-right: 8px;
+            color: #B76E79;
+        }
+        .cert-card::before, .skill-card::before, .platform-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(183, 110, 121, 0.2) 0%, rgba(183, 110, 121, 0) 70%);
+            transform: rotate(45deg);
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+        .cert-card:hover::before, .skill-card:hover::before, .platform-card:hover::before {
+            opacity: 1;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+    <script>
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        function createSnowflakes() {
+            const snowflakeCount = 100;
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.width = `${Math.random() * 5 + 2}px`;
+                snowflake.style.height = snowflake.style.width;
+                snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                document.body.appendChild(snowflake);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', createSnowflakes);
+    </script>
+</head>
+<body class="bg-D4F6FF text-gray-800">
+    <div class="container mx-auto p-6">
+        <!-- Header Section -->
+        <div class="header mb-8 parallax" style="background-image: url('https://placehold.co/1200x300');">
+            <h1>Resume</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Education Section -->
+            <div>
+                <h2 class="text-lg font-semibold mb-6">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    Education
+                </h2>
+                <div class="relative">
+                    <div class="absolute left-4 top-0 h-full border-l-2 border-B76E79"></div>
+                    <div class="relative pl-8 mb-6">
+                        <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-B76E79 p-1 rounded-full"></div>
+                        <div class="bg-D4F6FF p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-calendar-alt text-B76E79 mr-2"></i>
+                                <span>2022 - 2026</span>
+                            </div>
+                            <h3 class="text-base font-medium mb-2">Bachelor of Technology in Information Technology (Pre-Final Year)</h3>
+                            <p>Kingston Engineering College, Anna University<br/>Current CGPA: 9.03/10</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 mb-6">
+                        <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-B76E79 p-1 rounded-full"></div>
+                        <div class="bg-D4F6FF p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-calendar-alt text-B76E79 mr-2"></i>
+                                <span>2021 - 2022</span>
+                            </div>
+                            <h3 class="text-base font-medium mb-2">Higher Secondary Certificate (HSC)</h3>
+                            <p>Sai Guruji School, K.V.Kuppam<br/>Percentage: 89.2%</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 mb-6">
+                        <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-B76E79 p-1 rounded-full"></div>
+                        <div class="bg-D4F6FF p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-calendar-alt text-B76E79 mr-2"></i>
+                                <span>2019 - 2020</span>
+                            </div>
+                            <h3 class="text-base font-medium mb-2">Secondary School Leaving Certificate (SSLC)</h3>
+                            <p>Sai Guruji School, K.V.Kuppam<br/>Percentage: 92%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Section -->
+            <div>
+                <h2 class="text-lg font-semibold mb-6">
+                    <i class="fas fa-briefcase mr-2"></i>
+                    Experience
+                </h2>
+                <div class="relative">
+                    <div class="absolute left-4 top-0 h-full border-l-2 border-B76E79"></div>
+                    <div class="relative pl-8 mb-6">
+                        <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-B76E79 p-1 rounded-full"></div>
+                        <div class="bg-D4F6FF p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-calendar-alt text-B76E79 mr-2"></i>
+                                <span>Jan 2025 - Present</span>
+                            </div>
+                            <h3 class="text-base font-medium mb-2">Web Development Intern - Prodigy InfoTech</h3>
+                            <p>Maharashtra, India · Remote<br/>Created responsive web applications, including a Weather App and Interactive Navigation Bar, using HTML, CSS, and JavaScript. Gained hands-on experience in front-end development and dynamic UI design.</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 mb-6">
+                        <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-B76E79 p-1 rounded-full"></div>
+                        <div class="bg-D4F6FF p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-calendar-alt text-B76E79 mr-2"></i>
+                                <span>Sep 2024 - Nov 2024</span>
+                            </div>
+                            <h3 class="text-base font-medium mb-2">Full Stack Web Development Intern - CODTECH IT SOLUTIONS</h3>
+                            <p>India · Remote<br/>Completed assigned full-stack development tasks, focusing on building and optimizing web applications.</p>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 mb-6">
+                        <div class="absolute left-4 top-0 transform -translate-x-1/2 -translate-y-1/2 bg-B76E79 p-1 rounded-full"></div>
+                        <div class="bg-D4F6FF p-6 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-calendar-alt text-B76E79 mr-2"></i>
+                                <span>Aug 2024 - Sep 2024</span>
+                            </div>
+                            <h3 class="text-base font-medium mb-2">Web Designing & Development Intern - Prompt Infotech Coimbatore</h3>
+                            <p>Vellore, Tamil Nadu, India · Remote<br/>Gained hands-on experience in web designing and development, working on various tasks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills Section -->
+        <div class="mt-12">
+            <h2 class="text-lg font-semibold mb-6">
+                <i class="fas fa-tools mr-2"></i>
+                Skills
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="skill-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-code mr-2"></i>
+                        Web Development
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-html5 text-B76E79 mr-2"></i>
+                            HTML
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-css3-alt text-B76E79 mr-2"></i>
+                            CSS
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-js text-B76E79 mr-2"></i>
+                            JavaScript
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-react text-B76E79 mr-2"></i>
+                            React
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-database text-B76E79 mr-2"></i>
+                            MongoDB
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-node-js text-B76E79 mr-2"></i>
+                            Node.js
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-php text-B76E79 mr-2"></i>
+                            PHP
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-paint-brush mr-2"></i>
+                        UI/UX Design
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-adobe text-B76E79 mr-2"></i>
+                            Adobe Photoshop
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-sketch text-B76E79 mr-2"></i>
+                            Sketch
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fab fa-figma text-B76E79 mr-2"></i>
+                            Figma
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-pencil-ruler text-B76E79 mr-2"></i>
+                            Wireframing
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-palette text-B76E79 mr-2"></i>
+                            Prototyping
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Certifications Section -->
+        <div class="mt-12">
+            <h2 class="text-lg font-semibold mb-6">
+                <i class="fas fa-certificate mr-2"></i>
+                Certifications
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="cert-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-award mr-2"></i>
+                        Certifications
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            React (Infosys)
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Web Development (LetsUpgrade)
+                        </li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Data Analytics (Google)
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Python (Lernx)
+                        </li>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Full stack web development (NoviTech)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Coding Platforms & Practice Section -->
+        <div class="mt-12">
+            <h2 class="text-lg font-semibold mb-6">
+                <i class="fas fa-laptop-code mr-2"></i>
+                Coding Platforms &amp; Practice
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="platform-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-laptop-code mr-2"></i>
+                        SoloLearn
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Building foundational knowledge through interactive lessons.
+                        </li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-laptop-code mr-2"></i>
+                        CodeChef
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Practicing competitive programming for speed and precision.
+                        </li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-laptop-code mr-2"></i>
+                        GeeksforGeeks
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Studying algorithms and data structures in depth.
+                        </li>
+                    </ul>
+                </div>
+                <div class="platform-card">
+                    <h3 class="text-base font-medium mb-4">
+                        <i class="fas fa-laptop-code mr-2"></i>
+                        LeetCode
+                    </h3>
+                    <ul>
+                        <li class="flex items-center mb-3">
+                            <i class="fas fa-check-circle text-B76E79 mr-2"></i>
+                            Solving algorithmic challenges for interview prep.
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+        </body>
+    </html>

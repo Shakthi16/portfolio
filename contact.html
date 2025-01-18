@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Get in Touch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-pink-100 to-pink-200 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+        <!-- Form Section -->
+        <div class="w-full md:w-1/2 flex flex-col items-center justify-center space-y-6">
+            <h1 class="text-4xl font-extrabold text-purple-800 mb-6 text-center">Get in touch</h1>
+            <form action="https://api.web3forms.com/submit" method="POST" class="w-full max-w-md space-y-6">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="3bc2b226-c830-4aa4-b8b0-592dddb5ea12" />
+                
+                <!-- User Name -->
+                <input 
+                    class="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-lg" 
+                    placeholder="Your Name" 
+                    type="text" 
+                    name="name" 
+                    required 
+                />
+                
+                <!-- User Email -->
+                <input 
+                    class="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-lg" 
+                    placeholder="Your Email" 
+                    type="email" 
+                    name="email" 
+                    required 
+                />
+                
+                <!-- Interest Dropdown -->
+                <select 
+                    class="w-full p-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 shadow-lg" 
+                    name="interest" 
+                    required
+                >
+                    <option value="" disabled selected>Select your interest</option>
+                    <option value="Front-End Development">Front-End Development</option>
+                    <option value="Back-End Development">Back-End Development</option>
+                    <option value="Full-Stack Development">Full-Stack Development</option>
+                    <option value="UI Design">UI Design</option>
+                    <option value="UX Research">UX Research</option>
+                    <option value="Prototyping">Prototyping</option>
+                    <option value="Wireframing">Wireframing</option>
+                </select>
+                
+                <!-- User Message -->
+                <textarea 
+                    class="w-full p-4 rounded-3xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 h-32 shadow-lg" 
+                    placeholder="Your Message" 
+                    name="message" 
+                    required
+                ></textarea>
+                
+                <!-- Submit Button -->
+                <button 
+                    class="w-full p-4 rounded-full bg-gradient-to-r from-orange-400 to-pink-500 text-white font-bold flex items-center justify-center shadow-lg transform transition-transform hover:scale-105" 
+                    type="submit"
+                >
+                    Submit
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Image Section -->
+        <div class="w-full md:w-1/2 flex justify-center w-156 h-159">
+            <img 
+                alt="Decorative illustration with abstract shapes and chat bubbles" 
+                class="w-3/4 transform transition-transform hover:scale-105" 
+                src="https://i.ibb.co/NYyF5Kz/right-img.png"
+            />
+        </div>
+    </div>
+</body>
+</html>
